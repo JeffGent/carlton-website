@@ -21,7 +21,7 @@ body{font-family:'Jost',sans-serif;color:var(--text);background:var(--cream);fon
 
 /* NAV */
 .site-nav{position:fixed;top:0;left:0;width:100%;display:flex;align-items:center;padding:18px 40px;z-index:100;transition:background .4s,box-shadow .4s}
-.site-nav.scrolled{background:rgba(250,246,241,.97);box-shadow:0 1px 8px rgba(54,51,51,.08)}
+.site-nav.scrolled{background:rgba(250,246,241,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 8px rgba(54,51,51,.08)}
 .nav-logo{font-family:'Vollkorn',serif;font-size:1.6rem;font-weight:500;color:var(--cream);text-decoration:none;letter-spacing:.5px;transition:color .4s}
 .site-nav.scrolled .nav-logo{color:var(--charcoal)}
 .nav-links{list-style:none;display:flex;gap:28px;margin:0 auto}
@@ -107,7 +107,8 @@ section{padding:clamp(60px,8vw,100px) clamp(20px,5vw,80px)}
 /* ROOMS */
 .rooms-section{background:var(--cream-warm)}
 .rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
-.room-card{position:relative;overflow:hidden;cursor:pointer;background:var(--charcoal);aspect-ratio:3/4}
+.room-card{position:relative;overflow:hidden;cursor:pointer;background:var(--charcoal);aspect-ratio:3/4;transition:transform .35s,box-shadow .35s}
+.room-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.22)}
 .room-slides{position:absolute;inset:0;display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
 .room-slides img{min-width:100%;width:100%;height:100%;object-fit:cover;opacity:.72;transition:opacity .4s}
 .room-card:hover .room-slides img{opacity:.48}
@@ -279,3 +280,20 @@ section{padding:clamp(60px,8vw,100px) clamp(20px,5vw,80px)}
 .mobile-book-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:#b05a3a;z-index:190;padding:0}
 .mobile-book-bar a{color:#fff;font-size:12px;font-weight:400;letter-spacing:2px;text-transform:uppercase;text-decoration:none;display:block;padding:16px 24px;text-align:center}
 @media(max-width:768px){.mobile-book-bar{display:block}.footer-grid{padding-bottom:60px}}
+
+/* FAQ ACCORDION */
+.faq-list{border-top:1px solid var(--sand);margin-top:32px}
+.faq-item{border-bottom:1px solid var(--sand)}
+.faq-item summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:20px 4px;cursor:pointer;font-family:'Vollkorn',serif;font-size:1.05rem;font-weight:500;color:var(--charcoal);gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.5rem;font-weight:300;color:var(--terracotta,#b05a3a);flex-shrink:0;transition:transform .3s;line-height:1}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item[open] summary{color:var(--terracotta,#b05a3a)}
+.faq-a{padding:0 4px 20px;font-size:.88rem;color:var(--text-mid);line-height:1.8}
+
+/* SUSTAIN TILE ICONS */
+.sustain-tile-icon{display:block;margin-bottom:12px;color:var(--terracotta,#b05a3a);opacity:.85}
+.sustain-tile-icon svg{width:28px;height:28px;stroke-width:1.5;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+
+/* GENT SECTION BG */
+#gent{background:var(--cream-warm);padding-top:64px;padding-bottom:64px}
