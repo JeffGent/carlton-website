@@ -573,6 +573,26 @@
 </div>
 </section>
 
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+<p class="section-tag">Wat onze gasten zeggen</p>
+<h2 class="section-title">Google Reviews</h2>
+<div class="reviews-intro">
+  <div class="reviews-score-wrap">
+    <div class="reviews-score" id="reviews-score">·</div>
+    <div class="reviews-meta">
+      <div class="reviews-stars-row"><svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:var(--terra)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:var(--terra)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:var(--terra)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:var(--terra)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:var(--terra)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div class="reviews-count" id="reviews-count">op Google</div>
+    </div>
+  </div>
+  <a href="https://www.google.com/maps/search/?api=1&query=Carlton+Hotel+Gent&query_place_id=ChIJH6TNAOBzw0cRFNylHzN8rpY" class="reviews-google-link" target="_blank" rel="noopener">Bekijk alle reviews op Google →</a>
+</div>
+<div class="reviews-grid" id="reviews-grid">
+  <div class="review-loading"><p>Reviews worden geladen…</p></div>
+</div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
 <div class="contact">
@@ -711,5 +731,52 @@
 <script src="../script.js"></script>
 
 <div class="mobile-book-bar"><a href="https://bookingengine.mylighthouse.com/carlton-hotel-gent-gent/Rooms/GeneralAvailability?Language=nl" target="_blank" rel="noopener">Boek hier</a></div>
+
+<!-- GOOGLE REVIEWS -->
+<script>
+(function(){
+  var PLACE_ID='ChIJH6TNAOBzw0cRFNylHzN8rpY';
+  var API_KEY='AIzaSyDbuLfAbMiFANWyrCIDbjcnBIAKHqU-E74';
+  var MAPS_URL='https://www.google.com/maps/search/?api=1&query=Carlton+Hotel+Gent&query_place_id=ChIJH6TNAOBzw0cRFNylHzN8rpY';
+  var LANG='nl';
+  var FALLBACK='Bekijk alle reviews op Google →';
+  function star(){return'<svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:var(--terra)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';}
+  function render(place){
+    var grid=document.getElementById('reviews-grid');
+    var scoreEl=document.getElementById('reviews-score');
+    var countEl=document.getElementById('reviews-count');
+    if(scoreEl&&place.rating)scoreEl.textContent=place.rating.toFixed(1);
+    if(countEl&&place.user_ratings_total)countEl.textContent=place.user_ratings_total+' reviews';
+    if(!place.reviews||!place.reviews.length){
+      grid.innerHTML='<div class="review-card"><p class="review-text"><a href="'+MAPS_URL+'" target="_blank" rel="noopener" style="color:var(--terra)">'+FALLBACK+'</a></p></div>';
+      return;
+    }
+    grid.innerHTML=place.reviews.slice(0,3).map(function(r){
+      var txt=r.text&&r.text.length>240?r.text.substring(0,240)+'…':r.text||'';
+      var stars='';for(var i=0;i<Math.round(r.rating);i++)stars+=star();
+      return'<div class="review-card">'
+        +'<div class="review-header">'
+        +'<div><div class="review-author-name">'+r.author_name+'</div>'
+        +'<div class="review-date">'+r.relative_time_description+'</div></div>'
+        +'<div class="reviews-stars-row">'+stars+'</div>'
+        +'</div>'
+        +'<p class="review-text">“'+txt+'”</p>'
+        +'</div>';
+    }).join('');
+  }
+  window.__carltonReviews=function(){
+    var d=document.createElement('div');d.style.display='none';document.body.appendChild(d);
+    var map=new google.maps.Map(d,{center:{lat:51.0364,lng:3.7167},zoom:15});
+    var svc=new google.maps.places.PlacesService(map);
+    svc.getDetails({placeId:PLACE_ID,fields:['rating','user_ratings_total','reviews']},function(p,s){
+      if(s===google.maps.places.PlacesServiceStatus.OK){render(p);}
+      else{var g=document.getElementById('reviews-grid');g.innerHTML='<div class="review-card"><p class="review-text"><a href="'+MAPS_URL+'" target="_blank" rel="noopener" style="color:var(--terra)">'+FALLBACK+'</a></p></div>';}
+    });
+  };
+  var s=document.createElement('script');
+  s.src='https://maps.googleapis.com/maps/api/js?key='+API_KEY+'&libraries=places&language='+LANG+'&callback=__carltonReviews';
+  s.async=true;s.defer=true;document.head.appendChild(s);
+})();
+</script>
 </body>
 </html>
