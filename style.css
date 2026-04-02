@@ -1,9 +1,9 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
---cream:#faf6f1;
---cream-warm:#f5ece2;
---sand:#ede0d2;
---sand-warm:#e6d6c6;
+--cream:#faf3ef;
+--cream-warm:#f5e6dc;
+--sand:#eed4c4;
+--sand-warm:#e5c8b4;
 --charcoal:#363333;
 --charcoal-deep:#2a2727;
 --charcoal-light:#4d4848;
