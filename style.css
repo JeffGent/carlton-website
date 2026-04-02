@@ -151,10 +151,13 @@ section{padding:clamp(60px,8vw,100px) clamp(20px,5vw,80px)}
 .sustain-tile p{font-size:.82rem;color:var(--text-mid);line-height:1.7}
 
 /* PRACTICAL */
-.practical-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px}
-.practical-card{padding:32px 28px;background:var(--cream-warm);border:1px solid var(--sand)}
-.practical-card h3{font-family:'Vollkorn',serif;font-size:1.25rem;color:var(--charcoal);font-weight:400;margin-bottom:10px}
-.practical-card p{font-size:.88rem;color:var(--text-mid);line-height:1.7}
+.practical-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.practical-card{padding:36px 30px;background:var(--cream);border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.06);transition:box-shadow .3s}
+.practical-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.practical-card .practical-icon{width:36px;height:36px;stroke:var(--terra);stroke-width:1.5;fill:none;margin-bottom:18px}
+.practical-card h3{font-family:'Vollkorn',serif;font-size:1.15rem;color:var(--charcoal);font-weight:500;margin-bottom:12px}
+.practical-card p{font-size:.85rem;color:var(--text-mid);line-height:1.75}
+.practical-card p+p{margin-top:10px}
 
 /* CONTACT */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);align-items:start}
