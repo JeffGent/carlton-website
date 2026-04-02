@@ -69,11 +69,12 @@ body{font-family:'Jost',sans-serif;color:var(--text);background:var(--cream);fon
 @keyframes scrollPulse{0%,100%{opacity:.2;transform:scaleY(.6)}50%{opacity:.6;transform:scaleY(1)}}
 
 /* BOOKING BAR */
-.booking-bar{position:sticky;top:60px;z-index:90;background:var(--sand-warm);border-top:1px solid var(--peach-pale);padding:14px 40px;display:flex;align-items:center;gap:16px}
+.booking-bar{position:sticky;top:60px;z-index:90;background:var(--cream-warm);border-top:1px solid var(--peach-pale);padding:14px 40px;display:flex;align-items:center;gap:16px}
 .booking-label{font-family:'Vollkorn',serif;font-size:1.15rem;color:var(--charcoal);font-weight:500;white-space:nowrap}
 .booking-fields{display:flex;gap:10px;flex:1}
 .b-input{padding:10px 14px;border:1px solid var(--sand);background:var(--cream);font-family:'Jost',sans-serif;font-size:.85rem;color:var(--text);outline:none;width:160px;transition:border-color .3s}
 .b-input:focus{border-color:var(--terra)}
+.coupon-hint{font-size:.75rem;color:var(--text-mid);font-style:italic;white-space:nowrap;align-self:center}
 .btn-book-bar{padding:11px 28px;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:400;background:var(--charcoal);color:var(--cream);text-decoration:none;border:none;cursor:pointer;transition:background .3s;white-space:nowrap}
 .btn-book-bar:hover{background:var(--charcoal-deep)}
 
