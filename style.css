@@ -265,6 +265,7 @@ section{padding:clamp(60px,8vw,100px) clamp(20px,5vw,80px)}
 .breakfast-img{order:-1}
 .services-grid{grid-template-columns:1fr}
 .practical-grid{grid-template-columns:1fr}
+.faq-list{grid-template-columns:1fr}
 .contact{grid-template-columns:1fr}
 .insta-grid{grid-template-columns:repeat(3,1fr)}
 .footer-grid{grid-template-columns:1fr 1fr}
@@ -285,14 +286,14 @@ section{padding:clamp(60px,8vw,100px) clamp(20px,5vw,80px)}
 @media(max-width:768px){.mobile-book-bar{display:block}.footer-grid{padding-bottom:60px}}
 
 /* FAQ ACCORDION */
-.faq-list{border-top:1px solid var(--sand);margin-top:32px}
+.faq-list{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:32px}
 .faq-item{border-bottom:1px solid var(--sand)}
-.faq-item summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:20px 4px;cursor:pointer;font-family:'Vollkorn',serif;font-size:1.05rem;font-weight:500;color:var(--charcoal);gap:16px}
+.faq-item summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 4px;cursor:pointer;font-family:'Vollkorn',serif;font-size:1.02rem;font-weight:500;color:var(--charcoal);gap:16px}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary::after{content:'+';font-size:1.5rem;font-weight:300;color:var(--terracotta,#b05a3a);flex-shrink:0;transition:transform .3s;line-height:1}
 .faq-item[open] summary::after{transform:rotate(45deg)}
 .faq-item[open] summary{color:var(--terracotta,#b05a3a)}
-.faq-a{padding:0 4px 20px;font-size:.88rem;color:var(--text-mid);line-height:1.8}
+.faq-a{padding:0 4px 18px;font-size:.85rem;color:var(--text-mid);line-height:1.75}
 
 /* SUSTAIN TILE ICONS */
 .sustain-tile-icon{display:block;margin-bottom:12px;color:var(--terracotta,#b05a3a);opacity:.85}
