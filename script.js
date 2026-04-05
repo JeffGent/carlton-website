@@ -61,6 +61,56 @@ goToSlide(card,cur+(dx<0?1:-1));
 },{passive:true});
 });
 
+// LIGHTBOX
+(function(){
+var lb,lbImg,lbCounter,imgs=[],cur=0;
+function create(){
+lb=document.createElement('div');lb.className='lightbox';
+lbImg=document.createElement('img');
+var prev=document.createElement('button');prev.className='lb-arrow lb-prev';prev.innerHTML='&#8249;';
+var next=document.createElement('button');next.className='lb-arrow lb-next';next.innerHTML='&#8250;';
+var close=document.createElement('button');close.className='lb-close';close.innerHTML='&times;';
+lbCounter=document.createElement('div');lbCounter.className='lb-counter';
+lb.appendChild(lbImg);lb.appendChild(prev);lb.appendChild(next);lb.appendChild(close);lb.appendChild(lbCounter);
+document.body.appendChild(lb);
+prev.addEventListener('click',function(e){e.stopPropagation();go(cur-1)});
+next.addEventListener('click',function(e){e.stopPropagation();go(cur+1)});
+close.addEventListener('click',closeLb);
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+lbImg.addEventListener('click',function(e){e.stopPropagation();go(cur+1)});
+document.addEventListener('keydown',function(e){
+if(!lb.classList.contains('active'))return;
+if(e.key==='Escape')closeLb();
+if(e.key==='ArrowRight')go(cur+1);
+if(e.key==='ArrowLeft')go(cur-1);
+});
+}
+function go(idx){
+if(idx<0)idx=imgs.length-1;if(idx>=imgs.length)idx=0;
+cur=idx;
+lbImg.src=imgs[cur];
+lbCounter.textContent=(cur+1)+' / '+imgs.length;
+}
+function closeLb(){lb.classList.remove('active')}
+function openLb(card,startIdx){
+if(!lb)create();
+imgs=[];
+card.querySelectorAll('.room-slides img').forEach(function(img){imgs.push(img.src)});
+cur=startIdx||parseInt(card.getAttribute('data-slide'))||0;
+go(cur);
+lb.classList.add('active');
+}
+document.querySelectorAll('.room-card').forEach(function(card){
+card.querySelectorAll('.room-slides img').forEach(function(img){
+img.style.cursor='zoom-in';
+img.addEventListener('click',function(e){
+e.stopPropagation();
+openLb(card);
+});
+});
+});
+})();
+
 // BREAKFAST SLIDES
 var bfWrap=document.querySelector('.breakfast-img');
 var bfIdx=0,bfTotal=document.querySelectorAll('.breakfast-slides img').length;
