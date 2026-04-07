@@ -654,7 +654,7 @@
 <h4>Info</h4>
 <a href="terms.html">Cancellation policy</a>
 <a href="#" onclick="document.getElementById('modal-privacy').classList.add('active');return false">Privacy policy</a>
-<a href="#" onclick="document.getElementById('modal-terms').classList.add('active');return false">Terms & conditions</a>
+<a href="#terms" onclick="document.getElementById('modal-terms').classList.add('active');return false">Terms & conditions</a>
 </div>
 </div>
 <div class="footer-bottom">
@@ -709,18 +709,41 @@
 <button class="policy-close" onclick="this.closest('.policy-overlay').classList.remove('active')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <div class="policy-body">
-<h3>1. Reservations</h3>
-<p>A reservation is final upon receipt of a confirmation e-mail. The room will be held until 22:00 on the day of arrival, unless otherwise agreed.</p>
+<h3>1. Reservations and payment</h3>
+<p>A reservation is final upon email confirmation. Payment is made according to the chosen rate: with flexible rates, your card is charged immediately with the option of free cancellation up to 24 hours before arrival. With non-refundable rates, the full amount is due immediately and is non-refundable.</p>
+
 <h3>2. Check-in and check-out</h3>
-<p>Check-in: from 15:00. Check-out: until 11:00. Late check-out on request and subject to availability.</p>
-<h3>3. Cancellation</h3>
-<p>Please refer to our <a href="terms.html" style="color:var(--terra)">cancellation policy</a> for the full terms.</p>
-<h3>4. Liability</h3>
-<p>The hotel is not liable for loss, theft or damage to personal belongings. A safe is available at reception.</p>
-<h3>5. Pets</h3>
-<p>Pets are not allowed in the hotel.</p>
-<h3>6. Applicable law</h3>
-<p>These terms are governed by Belgian law. Disputes will be submitted to the competent court in Ghent.</p>
+<p>Check-in is available from 3:00 PM. Check-out must be completed by 11:00 AM. Early check-in or late check-out is available upon request and may incur additional charges. Please contact us for availability.</p>
+
+<h3>3. Identification</h3>
+<p>Upon check-in, each guest must present a valid ID card or passport. This is a legal requirement under Belgian law.</p>
+
+<h3>4. House rules</h3>
+<h4>Smoking</h4>
+<p>Carlton Hotel Gent is entirely smoke-free. Smoking is not permitted in rooms, hallways or common areas. A cleaning fee of EUR 150 will be charged in case of violation.</p>
+<h4>Quiet hours</h4>
+<p>We ask our guests to respect quiet hours between 10:00 PM and 8:00 AM. Music and noise should be kept to a minimum. In the event of repeated disturbances, Carlton Hotel Gent reserves the right to charge a surcharge of €150 per incident or, in case of serious disruption, to terminate the stay with immediate effect without entitlement to a refund.</p>
+<h4>Pets</h4>
+<p>Unfortunately, pets are not allowed in our hotel.</p>
+<h4>Damage</h4>
+<p>The guest is liable for any damage to the hotel or room furnishings caused during the stay. A cost assessment will be made in mutual consultation. Payment is expected by credit card, payment request or bank transfer.</p>
+<h4>Breakfast</h4>
+<p>Breakfast is served Monday to Friday from 7:00 AM to 10:00 AM, and on Saturday and Sunday from 8:00 AM to 11:00 AM. Guests who have not booked breakfast can add it at the reception.</p>
+
+<h3>5. Liability</h3>
+<p>Carlton Hotel Gent is not liable for loss, theft or damage to guests' personal belongings. Valuables can be stored in the in-room safe.</p>
+
+<h3>6. Force majeure</h3>
+<p>Carlton Hotel Gent is not liable for failure to fulfil obligations due to force majeure, including but not limited to natural disasters, strikes, pandemics or government measures.</p>
+
+<h3>7. Applicable law</h3>
+<p>These terms are governed by Belgian law. Any disputes will be submitted to the competent courts of Ghent.</p>
+
+<h3>8. Website usage</h3>
+<p>The content of this website is the property of Carlton Hotel Gent BV. Copying, redistribution or reuse of texts, photos or other material is not permitted without written permission.</p>
+
+<h3>9. Contact</h3>
+<p><strong>CARLTON HOTEL GENT BV</strong><br>Koningin Astridlaan 138, 9000 Ghent, Belgium<br>VAT: BE0841 405 912<br>Email: <strong>info@carltongent.be</strong></p>
 </div>
 </div>
 </div>
@@ -773,6 +796,17 @@
   var s=document.createElement('script');
   s.src='https://maps.googleapis.com/maps/api/js?key='+API_KEY+'&libraries=places&language='+LANG+'&callback=__carltonReviews';
   s.async=true;s.defer=true;document.head.appendChild(s);
+})();
+</script>
+<script>
+(function(){
+  var map = {'terms':'modal-terms','privacy':'modal-privacy'};
+  var h = window.location.hash.substring(1);
+  if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  window.addEventListener('hashchange',function(){
+    var h=window.location.hash.substring(1);
+    if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  });
 })();
 </script>
 </body>

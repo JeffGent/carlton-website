@@ -643,7 +643,7 @@
 <h4>Info</h4>
 <a href="conditions.html">Conditions d'annulation</a>
 <a href="#" onclick="document.getElementById('modal-privacy').classList.add('active');return false">Politique de confidentialite</a>
-<a href="#" onclick="document.getElementById('modal-terms').classList.add('active');return false">Conditions generales</a>
+<a href="#conditions" onclick="document.getElementById('modal-terms').classList.add('active');return false">Conditions generales</a>
 </div>
 </div>
 <div class="footer-bottom">
@@ -698,18 +698,41 @@
 <button class="policy-close" onclick="this.closest('.policy-overlay').classList.remove('active')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <div class="policy-body">
-<h3>1. Reservations</h3>
-<p>Une reservation est definitive apres reception d'un e-mail de confirmation. La chambre est maintenue a disposition jusqu'a 22h00 le jour d'arrivee, sauf accord contraire.</p>
+<h3>1. Réservations et paiement</h3>
+<p>Une réservation est définitive après confirmation par e-mail. Le paiement s'effectue selon le tarif choisi : pour les tarifs flexibles, votre carte est débitée immédiatement avec possibilité d'annulation gratuite jusqu'à 24 heures avant l'arrivée. Pour les tarifs non remboursables, le montant total est dû immédiatement et n'est pas remboursable.</p>
+
 <h3>2. Check-in et check-out</h3>
-<p>Check-in: a partir de 15h00. Check-out: jusqu'a 11h00. Late check-out sur demande et sous reserve de disponibilite.</p>
-<h3>3. Annulation</h3>
-<p>Consultez nos <a href="conditions.html" style="color:var(--terra)">conditions d'annulation</a> pour les conditions completes.</p>
-<h3>4. Responsabilite</h3>
-<p>L'hotel n'est pas responsable de la perte, du vol ou de l'endommagement d'effets personnels. Un coffre-fort est disponible a la reception.</p>
-<h3>5. Animaux de compagnie</h3>
-<p>Les animaux de compagnie ne sont pas admis dans l'hotel.</p>
-<h3>6. Droit applicable</h3>
-<p>Ces conditions sont soumises au droit belge. Les litiges seront portes devant le tribunal competent de Gand.</p>
+<p>Le check-in est possible à partir de 15h00. Le check-out doit être effectué avant 11h00. Un check-in anticipé ou un check-out tardif est possible sur demande et peut entraîner des frais supplémentaires. Veuillez nous contacter pour la disponibilité.</p>
+
+<h3>3. Identification</h3>
+<p>Lors du check-in, chaque hôte doit présenter une pièce d'identité valide ou un passeport. Ceci est une obligation légale conformément à la législation belge.</p>
+
+<h3>4. Règlement intérieur</h3>
+<h4>Interdiction de fumer</h4>
+<p>Carlton Hotel Gent est entièrement non-fumeur. Il est interdit de fumer dans les chambres, les couloirs ou les espaces communs. En cas d'infraction, des frais de nettoyage de 150 EUR seront facturés.</p>
+<h4>Heures de repos</h4>
+<p>Nous demandons à nos hôtes de respecter le repos nocturne entre 22h00 et 08h00. La musique et le bruit doivent être réduits au minimum. En cas de nuisances répétées, Carlton Hotel Gent se réserve le droit de facturer un supplément de 150 € par incident ou, en cas de trouble grave, de mettre fin au séjour avec effet immédiat sans droit à remboursement.</p>
+<h4>Animaux de compagnie</h4>
+<p>Malheureusement, les animaux de compagnie ne sont pas admis dans notre hôtel.</p>
+<h4>Dommages</h4>
+<p>L'hôte est responsable de tout dommage causé à l'hôtel ou au mobilier de la chambre pendant le séjour. Un état des coûts sera établi en concertation. Le paiement est attendu par carte de crédit, demande de paiement ou virement bancaire.</p>
+<h4>Petit-déjeuner</h4>
+<p>Le petit-déjeuner est servi du lundi au vendredi de 07h00 à 10h00 et le samedi et dimanche de 08h00 à 11h00. Les hôtes n'ayant pas réservé le petit-déjeuner peuvent l'ajouter à la réception.</p>
+
+<h3>5. Responsabilité</h3>
+<p>Carlton Hotel Gent n'est pas responsable de la perte, du vol ou de l'endommagement des effets personnels des hôtes. Les objets de valeur peuvent être conservés dans le coffre-fort de la chambre.</p>
+
+<h3>6. Force majeure</h3>
+<p>Carlton Hotel Gent n'est pas responsable du non-respect de ses obligations en cas de force majeure, y compris mais sans s'y limiter les catastrophes naturelles, grèves, pandémies ou mesures gouvernementales.</p>
+
+<h3>7. Droit applicable</h3>
+<p>Ces conditions sont régies par le droit belge. Tout litige sera soumis aux tribunaux compétents de Gand.</p>
+
+<h3>8. Utilisation du site web</h3>
+<p>Le contenu de ce site web est la propriété de Carlton Hotel Gent BV. La copie, la redistribution ou la réutilisation de textes, photos ou autres matériaux n'est pas autorisée sans permission écrite.</p>
+
+<h3>9. Contact</h3>
+<p><strong>CARLTON HOTEL GENT BV</strong><br>Koningin Astridlaan 138, 9000 Gand, Belgique<br>TVA : BE0841 405 912<br>E-mail : <strong>info@carltongent.be</strong></p>
 </div>
 </div>
 </div>
@@ -762,6 +785,17 @@
   var s=document.createElement('script');
   s.src='https://maps.googleapis.com/maps/api/js?key='+API_KEY+'&libraries=places&language='+LANG+'&callback=__carltonReviews';
   s.async=true;s.defer=true;document.head.appendChild(s);
+})();
+</script>
+<script>
+(function(){
+  var map = {'conditions':'modal-terms','confidentialite':'modal-privacy'};
+  var h = window.location.hash.substring(1);
+  if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  window.addEventListener('hashchange',function(){
+    var h=window.location.hash.substring(1);
+    if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  });
 })();
 </script>
 </body>

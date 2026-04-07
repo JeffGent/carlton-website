@@ -186,18 +186,41 @@
 <button class="policy-close" onclick="this.closest('.policy-overlay').classList.remove('active')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <div class="policy-body">
-<h3>1. Reservierungen</h3>
-<p>Eine Reservierung ist nach Erhalt einer Bestatigungs-E-Mail verbindlich. Das Zimmer wird bis 22:00 Uhr am Anreisetag freigehalten, sofern nicht anders vereinbart.</p>
+<h3>1. Reservierungen und Zahlung</h3>
+<p>Eine Reservierung ist nach Bestätigung per E-Mail verbindlich. Die Zahlung erfolgt gemäß dem gewählten Tarif: Bei flexiblen Tarifen wird Ihre Karte sofort belastet, mit der Möglichkeit einer kostenlosen Stornierung bis 24 Stunden vor Anreise. Bei nicht erstattungsfähigen Tarifen ist der volle Betrag sofort fällig und nicht rückerstattbar.</p>
+
 <h3>2. Check-in und Check-out</h3>
-<p>Check-in: ab 15:00 Uhr. Check-out: bis 11:00 Uhr. Spater Check-out auf Anfrage und nach Verfugbarkeit.</p>
-<h3>3. Stornierung</h3>
-<p>Bitte beachten Sie unsere <a href="bedingungen.html" style="color:var(--terra)">Stornierungsbedingungen</a> fur die vollstandigen Bedingungen.</p>
-<h3>4. Haftung</h3>
-<p>Das Hotel haftet nicht fur Verlust, Diebstahl oder Beschadigung personlicher Gegenstande. Ein Safe steht an der Rezeption zur Verfugung.</p>
-<h3>5. Haustiere</h3>
-<p>Haustiere sind im Hotel nicht gestattet.</p>
-<h3>6. Anwendbares Recht</h3>
-<p>Diese Bedingungen unterliegen belgischem Recht. Streitigkeiten werden dem zustandigen Gericht in Gent vorgelegt.</p>
+<p>Check-in ist ab 15:00 Uhr möglich. Check-out muss bis 11:00 Uhr erfolgen. Früher Check-in oder später Check-out ist auf Anfrage möglich und kann zusätzliche Kosten verursachen. Bitte kontaktieren Sie uns bezüglich der Verfügbarkeit.</p>
+
+<h3>3. Identifikation</h3>
+<p>Beim Check-in muss jeder Gast einen gültigen Personalausweis oder Reisepass vorlegen. Dies ist gesetzlich vorgeschrieben gemäß der belgischen Gesetzgebung.</p>
+
+<h3>4. Hausordnung</h3>
+<h4>Rauchen</h4>
+<p>Carlton Hotel Gent ist vollständig rauchfrei. Rauchen ist in den Zimmern, Fluren oder Gemeinschaftsräumen nicht gestattet. Bei Verstoß wird eine Reinigungsgebühr von 150 EUR berechnet.</p>
+<h4>Nachtruhe</h4>
+<p>Wir bitten unsere Gäste, die Nachtruhe zwischen 22:00 und 08:00 Uhr zu respektieren. Musik und Lärm sind auf ein Minimum zu beschränken. Bei wiederholten Störungen behält sich Carlton Hotel Gent das Recht vor, einen Zuschlag von 150 € pro Vorfall zu berechnen oder bei schwerwiegenden Störungen den Aufenthalt mit sofortiger Wirkung ohne Erstattungsanspruch zu beenden.</p>
+<h4>Haustiere</h4>
+<p>Leider sind Haustiere in unserem Hotel nicht gestattet.</p>
+<h4>Schäden</h4>
+<p>Der Gast haftet für Schäden am Hotel oder an der Zimmereinrichtung während des Aufenthalts. In gegenseitiger Absprache wird eine Kostenaufstellung erstellt. Die Zahlung wird per Kreditkarte, Zahlungsaufforderung oder Banküberweisung erwartet.</p>
+<h4>Frühstück</h4>
+<p>Das Frühstück wird montags bis freitags von 07:00 bis 10:00 Uhr und samstags und sonntags von 08:00 bis 11:00 Uhr serviert. Gäste, die kein Frühstück gebucht haben, können es an der Rezeption hinzubuchen.</p>
+
+<h3>5. Haftung</h3>
+<p>Carlton Hotel Gent haftet nicht für Verlust, Diebstahl oder Beschädigung persönlicher Gegenstände der Gäste. Wertgegenstände können im Zimmersafe aufbewahrt werden.</p>
+
+<h3>6. Höhere Gewalt</h3>
+<p>Carlton Hotel Gent haftet nicht für die Nichterfüllung von Verpflichtungen aufgrund höherer Gewalt, einschließlich, aber nicht beschränkt auf Naturkatastrophen, Streiks, Pandemien oder behördliche Maßnahmen.</p>
+
+<h3>7. Anwendbares Recht</h3>
+<p>Diese Bedingungen unterliegen belgischem Recht. Streitigkeiten werden dem zuständigen Gericht in Gent vorgelegt.</p>
+
+<h3>8. Website-Nutzung</h3>
+<p>Der Inhalt dieser Website ist Eigentum der Carlton Hotel Gent BV. Das Kopieren, Weiterverbreiten oder Wiederverwenden von Texten, Fotos oder anderem Material ist ohne schriftliche Genehmigung nicht gestattet.</p>
+
+<h3>9. Kontakt</h3>
+<p><strong>CARLTON HOTEL GENT BV</strong><br>Koningin Astridlaan 138, 9000 Gent, Belgien<br>USt-IdNr.: BE0841 405 912<br>E-Mail: <strong>info@carltongent.be</strong></p>
 </div>
 </div>
 </div>
@@ -247,6 +270,17 @@ if(!document.querySelector('.terms-section.active')){
   var first = document.querySelector('.terms-nav a');
   if(first) first.click();
 }
+</script>
+<script>
+(function(){
+  var map = {'agb':'modal-terms','datenschutz':'modal-privacy'};
+  var h = window.location.hash.substring(1);
+  if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  window.addEventListener('hashchange',function(){
+    var h=window.location.hash.substring(1);
+    if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  });
+})();
 </script>
 
 </body>

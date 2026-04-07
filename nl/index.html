@@ -667,7 +667,7 @@
 <h4>Info</h4>
 <a href="voorwaarden.html">Annuleringsbeleid</a>
 <a href="#" onclick="document.getElementById('modal-privacy').classList.add('active');return false">Privacyverklaring</a>
-<a href="#" onclick="document.getElementById('modal-terms').classList.add('active');return false">Algemene voorwaarden</a>
+<a href="#voorwaarden" onclick="document.getElementById('modal-terms').classList.add('active');return false">Algemene voorwaarden</a>
 </div>
 </div>
 <div class="footer-bottom">
@@ -722,18 +722,41 @@
 <button class="policy-close" onclick="this.closest('.policy-overlay').classList.remove('active')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
 </div>
 <div class="policy-body">
-<h3>1. Reserveringen</h3>
-<p>Een reservering is definitief na ontvangst van een bevestigingsmail. De kamer wordt ter beschikking gehouden tot 22:00 uur op de dag van aankomst, tenzij anders overeengekomen.</p>
+<h3>1. Reserveringen en betaling</h3>
+<p>Een reservering is definitief na bevestiging per e-mail. Betaling geschiedt conform het gekozen tarief: bij flexibele tarieven wordt uw kaart direct belast met mogelijkheid tot kosteloze annulering tot 24 uur voor aankomst. Bij non-refundable tarieven is het volledige bedrag onmiddellijk verschuldigd en niet restitueerbaar.</p>
+
 <h3>2. Check-in en check-out</h3>
-<p>Check-in: vanaf 15:00. Check-out: tot 11:00. Late check-out op aanvraag en mits beschikbaarheid.</p>
-<h3>3. Annulering</h3>
-<p>Raadpleeg ons <a href="voorwaarden.html" style="color:var(--terra)">annuleringsbeleid</a> voor de volledige voorwaarden.</p>
-<h3>4. Aansprakelijkheid</h3>
-<p>Het hotel is niet aansprakelijk voor verlies, diefstal of beschadiging van persoonlijke eigendommen. Een kluis is beschikbaar aan de receptie.</p>
-<h3>5. Huisdieren</h3>
-<p>Huisdieren zijn niet toegestaan in het hotel.</p>
-<h3>6. Toepasselijk recht</h3>
-<p>Op deze voorwaarden is het Belgisch recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechtbank te Gent.</p>
+<p>Check-in is mogelijk vanaf 15:00 uur. Check-out dient te gebeuren voor 11:00 uur. Vroege check-in of late check-out is op aanvraag mogelijk en kan extra kosten met zich meebrengen. Gelieve ons te contacteren voor beschikbaarheid.</p>
+
+<h3>3. Identificatie</h3>
+<p>Bij check-in dient elke gast een geldig identiteitsbewijs of paspoort voor te leggen. Dit is wettelijk verplicht conform de Belgische wetgeving.</p>
+
+<h3>4. Huisregels</h3>
+<h4>Roken</h4>
+<p>Carlton Hotel Gent is volledig rookvrij. Roken is niet toegestaan in de kamers, gangen of gemeenschappelijke ruimtes. Bij overtreding wordt een reinigingskost van €150 in rekening gebracht.</p>
+<h4>Nachtrust</h4>
+<p>Wij vragen onze gasten om de nachtrust te respecteren tussen 22:00 en 08:00 uur. Muziek en lawaai dienen tot een minimum beperkt te worden. Bij herhaaldelijke overlast behoudt Carlton Hotel Gent zich het recht voor een toeslag van €150 per incident aan te rekenen of, bij ernstige verstoring, het verblijf per direct te beëindigen zonder recht op terugbetaling.</p>
+<h4>Huisdieren</h4>
+<p>Helaas zijn huisdieren niet toegestaan in ons hotel.</p>
+<h4>Schade</h4>
+<p>De gast is aansprakelijk voor schade aan het hotel of de kamerinrichting veroorzaakt tijdens het verblijf. In onderling overleg wordt een kostenplaatje opgemaakt. Betaling wordt verwacht via kredietkaart, betaalverzoek of bankoverschrijving.</p>
+<h4>Ontbijt</h4>
+<p>Het ontbijt wordt geserveerd van maandag tot vrijdag van 07:00 tot 10:00 uur en op zaterdag en zondag van 08:00 tot 11:00 uur. Gasten die hun ontbijt niet hebben geboekt, kunnen dit bijboeken aan de receptie.</p>
+
+<h3>5. Aansprakelijkheid</h3>
+<p>Carlton Hotel Gent is niet aansprakelijk voor verlies, diefstal of beschadiging van persoonlijke bezittingen van gasten. Waardevolle voorwerpen kunnen in de kamerkluis bewaard worden.</p>
+
+<h3>6. Overmacht</h3>
+<p>Carlton Hotel Gent is niet aansprakelijk voor het niet nakomen van verplichtingen als gevolg van overmacht, waaronder maar niet beperkt tot natuurrampen, stakingen, pandemieën of overheidsmaatregelen.</p>
+
+<h3>7. Toepasselijk recht</h3>
+<p>Op deze voorwaarden is het Belgisch recht van toepassing. Eventuele geschillen worden voorgelegd aan de bevoegde rechtbanken van Gent.</p>
+
+<h3>8. Website gebruik</h3>
+<p>De inhoud van deze website is eigendom van Carlton Hotel Gent BV. Het kopiëren, herdistribueren of hergebruiken van teksten, foto's of ander materiaal is niet toegestaan zonder schriftelijke toestemming.</p>
+
+<h3>9. Contact</h3>
+<p><strong>CARLTON HOTEL GENT BV</strong><br>Koningin Astridlaan 138, 9000 Gent<br>BTW: BE0841 405 912<br>E-mail: <strong>info@carltongent.be</strong></p>
 </div>
 </div>
 </div>
@@ -786,6 +809,17 @@
   var s=document.createElement('script');
   s.src='https://maps.googleapis.com/maps/api/js?key='+API_KEY+'&libraries=places&language='+LANG+'&callback=__carltonReviews';
   s.async=true;s.defer=true;document.head.appendChild(s);
+})();
+</script>
+<script>
+(function(){
+  var map = {'voorwaarden':'modal-terms','privacy':'modal-privacy'};
+  var h = window.location.hash.substring(1);
+  if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  window.addEventListener('hashchange',function(){
+    var h=window.location.hash.substring(1);
+    if(map[h]){var m=document.getElementById(map[h]);if(m)m.classList.add('active');}
+  });
 })();
 </script>
 </body>
