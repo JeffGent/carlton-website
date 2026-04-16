@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Het hotel - Carlton Hotel Gent</title>
+<meta name="description" content="Praktische info over je verblijf bij Carlton Hotel Gent: huisregels, check-out, Wi-Fi, bagage en schoonmaak.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.carltongent.be/guest/nl/hotel.html">
+<link rel="alternate" hreflang="nl" href="https://www.carltongent.be/guest/nl/hotel.html">
+<link rel="alternate" hreflang="fr" href="https://www.carltongent.be/guest/fr/hotel.html">
+<link rel="alternate" hreflang="en" href="https://www.carltongent.be/guest/en/hotel.html">
+<link rel="alternate" hreflang="de" href="https://www.carltongent.be/guest/de/hotel.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#faf5f0;--cream-warm:#f5ece4;--sand:#e6dace;--sand-warm:#ddd0c2;
+  --burg:#3d1127;--burg-deep:#2d0a1a;--burg-light:#5a1d38;
+  --olive:#7b8060;--olive-light:#8d9070;
+  --rose:#d4a0b8;--rose-pale:#f0d4e0;
+  --text:#2a1a20;--text-mid:#5a4a50;--text-light:#8a7a7e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased}
+
+.top-bar{background:var(--burg);padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+.top-bar a{text-decoration:none}
+.top-logo{font-family:'Fraunces',serif;font-size:22px;font-weight:300;letter-spacing:0.5px;color:var(--cream)}
+.top-langs{display:flex;gap:8px;align-items:center}
+.top-langs a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,245,240,0.5);text-decoration:none;transition:color 0.2s}
+.top-langs a.active{color:var(--olive)}
+.top-langs a:hover{color:var(--cream)}
+.top-sep{width:1px;height:10px;background:rgba(250,245,240,0.2)}
+
+.page-wrap{max-width:720px;margin:0 auto;padding:48px 32px 80px}
+.page-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-mid);text-decoration:none;transition:color 0.2s;margin-bottom:28px}
+.page-back:hover{color:var(--olive)}
+.page-title{font-family:'Fraunces',serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:300;color:var(--burg);margin-bottom:8px}
+.page-intro{font-size:0.95rem;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:40px}
+
+.accordion{display:flex;flex-direction:column;gap:8px}
+.accordion-item{background:var(--cream-warm);border-radius:10px;overflow:hidden;border:1px solid var(--sand)}
+.accordion-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:none;border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:1rem;font-weight:500;color:var(--burg);text-align:left;transition:background 0.2s}
+.accordion-trigger:hover{background:var(--sand)}
+.accordion-trigger svg{width:18px;height:18px;stroke:var(--text-light);stroke-width:2;fill:none;transition:transform 0.3s}
+.accordion-item.open .accordion-trigger svg{transform:rotate(180deg)}
+.accordion-panel{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.accordion-item.open .accordion-panel{max-height:800px}
+.accordion-content{padding:0 24px 24px;font-size:0.9rem;color:var(--text-mid);font-weight:300;line-height:1.8}
+.accordion-content h3{font-family:'Fraunces',serif;font-size:1rem;color:var(--burg);margin:16px 0 6px;font-weight:400}
+.accordion-content h3:first-child{margin-top:0}
+.accordion-content ul{margin:8px 0 8px 20px}
+.accordion-content li{margin-bottom:4px}
+.accordion-content a{color:var(--olive);text-decoration:none}
+.accordion-content a:hover{text-decoration:underline}
+.accordion-content strong{font-weight:500;color:var(--text)}
+
+.info-box{background:var(--sand);border-radius:8px;padding:16px 20px;margin:12px 0;font-size:0.85rem;line-height:1.7}
+.info-box strong{color:var(--burg)}
+
+.guest-footer{text-align:center;padding:32px 24px;border-top:1px solid var(--sand);font-size:0.75rem;color:var(--text-light);font-weight:300;line-height:1.7}
+.guest-footer a{color:var(--olive);text-decoration:none}
+.guest-footer a:hover{text-decoration:underline}
+
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 4px 16px rgba(0,0,0,0.18);transition:all 0.3s;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.02em}
+.wa-float:hover{background:#1fba59;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.22)}
+.wa-float svg{flex-shrink:0}
+
+@media(max-width:600px){
+  .top-bar{padding:14px 20px}
+  .page-wrap{padding:36px 20px 60px}
+  .accordion-trigger{padding:16px 18px;font-size:0.95rem}
+  .accordion-content{padding:0 18px 20px}
+  .wa-float span{display:none}.wa-float{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="../../nl/" class="top-logo">Carlton Hotel</a>
+  <div class="top-langs">
+    <a href="hotel.html" hreflang="nl" class="active">NL</a><span class="top-sep"></span>
+    <a href="../fr/hotel.html" hreflang="fr">FR</a><span class="top-sep"></span>
+    <a href="../en/hotel.html" hreflang="en">EN</a><span class="top-sep"></span>
+    <a href="../de/hotel.html" hreflang="de">DE</a>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <a href="./" class="page-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg> Terug</a>
+
+  <h1 class="page-title">Het hotel</h1>
+  <p class="page-intro">Alles wat je moet weten voor een zorgeloos verblijf.</p>
+
+  <picture>
+    <source srcset="../../images/Kamer%20Deluxe%201.webp" type="image/webp">
+    <img src="../../images/Kamer%20Deluxe%201.jpg" alt="Kamer bij Carlton Hotel Gent" style="width:100%;border-radius:12px;margin-bottom:32px;aspect-ratio:4/3;object-fit:cover" loading="lazy">
+  </picture>
+
+  <div class="accordion">
+
+    <!-- Check-out -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Check-out
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Check-out is mogelijk tot <strong>11:00 uur</strong>. Heb je wat meer tijd nodig? Laat het ons weten aan de receptie, we bekijken graag de mogelijkheden. Late check-out is bijna altijd mogelijk, ten allerlaatste tot 13:00.</p>
+          <div class="info-box">
+            <strong>Vroeg vertrek?</strong> Als je voor 8u vertrekt, laat dit dan de avond voordien weten. We zorgen ervoor dat alles klaarstaat.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Huisregels -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Huisregels
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Een fijne sfeer begint bij een paar eenvoudige afspraken.</p>
+          <ul>
+            <li><strong>Niet roken:</strong> Roken is niet toegestaan in het hotel. Er is een rookzone aan de ingang. Bij overtreding wordt een reinigingskost van &euro;150 aangerekend.</li>
+            <li><strong>Nachtrust:</strong> We vragen stilte tussen 22:00 en 08:00 uur, zowel op de kamer als in de gangen.</li>
+            <li><strong>Geregistreerde gasten:</strong> Enkel ingeschreven gasten hebben toegang tot de kamers. Dit is voor ieders veiligheid.</li>
+            <li><strong>Maximale bezetting:</strong> Elke kamer heeft een maximumaantal personen op basis van de grootte en veiligheidsregels.</li>
+            <li><strong>Brandveiligheid:</strong> Alle kamers zijn uitgerust met rookmelders. Open vuur, zoals kaarsen, is niet toegestaan.</li>
+            <li><strong>Huisdieren:</strong> Huisdieren zijn helaas niet toegestaan in ons hotel.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wi-Fi -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Wi-Fi
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Snel en <strong>gratis</strong> Wi-Fi in elke kamer en in alle gemeenschappelijke ruimtes. Het wachtwoord krijg je bij het inchecken, of vraag het gewoon aan de receptie.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagage -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Bagage
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Vroeg aangekomen of laat vertrek? Geen probleem, we bewaren je bagage <strong>gratis</strong> aan de receptie, tot 22:00 uur. Als je kamer nog niet klaar is, zetten we je bagage klaar zodra die vrij komt.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schoonmaak -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Schoonmaak
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Je kamer wordt <strong>dagelijks</strong> schoongemaakt en alle toiletartikelen worden bijgevuld. Liever niet gestoord worden? Zeg het gerust aan de receptie of hang het bordje aan de deur.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Duurzaamheid -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" aria-expanded="false">
+        Duurzaamheid
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <div class="accordion-content">
+          <p>Bij Carlton gaat gastvrijheid hand in hand met respect voor mens en milieu.</p>
+          <ul>
+            <li><strong>Go Forest:</strong> 20% van de opbrengsten uit onze hotelparking gaat naar herbebossing in Peru. Intussen werden al meer dan 1.900 bomen geplant.</li>
+            <li><strong>Green Key:</strong> Carlton Hotel Gent is gecertificeerd met het Green Key-keurmerk, een internationaal erkend label voor duurzame hotels.</li>
+            <li><strong>Lokaal:</strong> We werken zoveel mogelijk met leveranciers uit de regio. Confituur van Callas, eieren van kippen met vrije uitloop, spek van Breydel uit de regio Gent.</li>
+            <li><strong>Ecologisch:</strong> Onze schoonmaak- en onderhoudsproducten voldoen aan de hoogste ecologische standaarden.</li>
+          </ul>
+          <p>Benieuwd naar de impact? Bekijk ons <a href="https://www.go-impact.be/en/partners/carlton-hotel-gent" target="_blank" rel="noopener">Go Forest rapport</a>.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="guest-footer">
+  Carlton Hotel Gent · Koningin Astridlaan 138, 9000 Gent<br>
+  <a href="tel:+3292228836">+32 9 222 88 36</a> · <a href="mailto:info@carltongent.be">info@carltongent.be</a>
+</div>
+
+<a href="https://wa.me/32472348422?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20mijn%20verblijf%20bij%20Carlton" class="wa-float" target="_blank" rel="noopener" aria-label="Chat op WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Chat met ons</span>
+</a>
+
+<script>
+document.querySelectorAll('.accordion-trigger').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.accordion-item');
+    var open=item.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+});
+</script>
+
+</body>
+</html>

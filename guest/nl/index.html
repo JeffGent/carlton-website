@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welkom - Carlton Hotel Gent</title>
+<meta name="description" content="Alle praktische info voor je verblijf bij Carlton Hotel Gent. Ontbijt, parking, stadstips, vervoer en meer.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.carltongent.be/guest/nl/">
+<link rel="alternate" hreflang="nl" href="https://www.carltongent.be/guest/nl/">
+<link rel="alternate" hreflang="fr" href="https://www.carltongent.be/guest/fr/">
+<link rel="alternate" hreflang="en" href="https://www.carltongent.be/guest/en/">
+<link rel="alternate" hreflang="de" href="https://www.carltongent.be/guest/de/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#faf5f0;--cream-warm:#f5ece4;--sand:#e6dace;--sand-warm:#ddd0c2;
+  --burg:#3d1127;--burg-deep:#2d0a1a;--burg-light:#5a1d38;
+  --olive:#7b8060;--olive-light:#8d9070;
+  --rose:#d4a0b8;--rose-pale:#f0d4e0;
+  --text:#2a1a20;--text-mid:#5a4a50;--text-light:#8a7a7e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased}
+
+/* ── top bar ── */
+.top-bar{background:var(--burg);padding:18px 40px;display:flex;align-items:center;justify-content:space-between}
+.top-bar a{text-decoration:none}
+.top-logo{font-family:'Fraunces',serif;font-size:22px;font-weight:300;letter-spacing:0.5px;color:var(--cream)}
+.top-langs{display:flex;gap:8px;align-items:center}
+.top-langs a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,245,240,0.5);text-decoration:none;transition:color 0.2s}
+.top-langs a.active{color:var(--olive)}
+.top-langs a:hover{color:var(--cream)}
+.top-sep{width:1px;height:10px;background:rgba(250,245,240,0.2)}
+
+/* ── main content ── */
+.guest-wrap{padding:88px 48px}
+.section-label{font-size:9px;font-weight:500;letter-spacing:0.38em;text-transform:uppercase;color:var(--olive);display:block;margin-bottom:16px}
+.section-title{font-family:'Fraunces',serif;font-size:clamp(38px,5.5vw,70px);font-weight:300;color:var(--burg);line-height:1.0}
+.section-sub{font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.72;margin-top:16px;max-width:520px}
+
+/* ── tips grid ── */
+.tips-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.tip{border-top:2px solid var(--rose-pale);padding-top:24px;text-decoration:none;display:block;transition:border-color 0.3s}
+.tip:hover{border-color:var(--olive)}
+.tip-cat{font-size:9px;font-weight:500;letter-spacing:0.34em;text-transform:uppercase;color:var(--olive);margin-bottom:10px}
+.tip h3{font-family:'Fraunces',serif;font-size:21px;font-weight:400;color:var(--burg);margin-bottom:8px}
+.tip p{font-size:15px;font-weight:300;color:var(--text-mid);line-height:1.72}
+.tip .tip-arrow{font-size:13px;color:var(--olive);margin-top:12px;display:inline-block;transition:transform 0.2s}
+.tip:hover .tip-arrow{transform:translateX(4px)}
+
+/* ── footer ── */
+.guest-footer{text-align:center;padding:32px 48px;border-top:1px solid var(--sand);font-size:12px;color:var(--text-light);font-weight:300;line-height:1.85}
+.guest-footer a{color:var(--olive);text-decoration:none}
+.guest-footer a:hover{text-decoration:underline}
+
+/* ── whatsapp float ── */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:900;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:12px 20px 12px 16px;border-radius:50px;box-shadow:0 4px 16px rgba(0,0,0,0.18);transition:all 0.3s;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.02em}
+.wa-float:hover{background:#1fba59;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.22)}
+.wa-float svg{flex-shrink:0}
+
+/* ── responsive ── */
+@media(max-width:768px){
+  .guest-wrap{padding:56px 32px}
+  .tips-grid{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:600px){
+  .top-bar{padding:14px 20px}
+  .guest-wrap{padding:48px 20px}
+  .tips-grid{grid-template-columns:1fr;gap:24px}
+  .wa-float span{display:none}.wa-float{padding:14px}
+  .guest-footer{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="../../nl/" class="top-logo">Carlton Hotel</a>
+  <div class="top-langs">
+    <a href="./" hreflang="nl" class="active">NL</a><span class="top-sep"></span>
+    <a href="../fr/" hreflang="fr">FR</a><span class="top-sep"></span>
+    <a href="../en/" hreflang="en">EN</a><span class="top-sep"></span>
+    <a href="../de/" hreflang="de">DE</a>
+  </div>
+</div>
+
+<section class="guest-wrap">
+  <span class="section-label">Welkom bij Carlton</span>
+  <h1 class="section-title">Klein hotel.<br>Groot onthaal.</h1>
+  <p class="section-sub">Fijn dat je er bent. Hier vind je alles om je verblijf zo aangenaam mogelijk te maken.</p>
+
+  <div class="tips-grid">
+
+    <a href="hotel.html" class="tip">
+      <p class="tip-cat">Je verblijf</p>
+      <h3>Het hotel</h3>
+      <p>Huisregels, check-out, Wi-Fi, bagage &amp; schoonmaak.</p>
+      <span class="tip-arrow">&rarr;</span>
+    </a>
+
+    <a href="ontbijt.html" class="tip">
+      <p class="tip-cat">Elke ochtend vers</p>
+      <h3>Ontbijt</h3>
+      <p>Uren, buffet &amp; warme bereidingen a la minute.</p>
+      <span class="tip-arrow">&rarr;</span>
+    </a>
+
+    <a href="stad.html" class="tip">
+      <p class="tip-cat">Tips van het hotel</p>
+      <h3>Ontdek Gent</h3>
+      <p>Hotspots, restaurants, fietsverhuur, citycards &amp; meer.</p>
+      <span class="tip-arrow">&rarr;</span>
+    </a>
+
+    <a href="parking.html" class="tip">
+      <p class="tip-cat">Praktisch</p>
+      <h3>Parking</h3>
+      <p>Privegarage, elektrisch laden, straatparkeren &amp; garages.</p>
+      <span class="tip-arrow">&rarr;</span>
+    </a>
+
+    <a href="vervoer.html" class="tip">
+      <p class="tip-cat">2 minuten van het station</p>
+      <h3>Richting centrum</h3>
+      <p>Tram, taxi of te voet. Het centrum is vlakbij.</p>
+      <span class="tip-arrow">&rarr;</span>
+    </a>
+
+    <a href="contact.html" class="tip">
+      <p class="tip-cat">We helpen je graag</p>
+      <h3>Receptie</h3>
+      <p>Bel, WhatsApp of kom langs voor een vraag of een tip.</p>
+      <span class="tip-arrow">&rarr;</span>
+    </a>
+
+  </div>
+</section>
+
+<div class="guest-footer">
+  Carlton Hotel Gent · Koningin Astridlaan 138, 9000 Gent<br>
+  <a href="tel:+3292228836">+32 9 222 88 36</a> · <a href="mailto:info@carltongent.be">info@carltongent.be</a>
+</div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/32472348422?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20mijn%20verblijf%20bij%20Carlton" class="wa-float" target="_blank" rel="noopener" aria-label="Chat op WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Chat met ons</span>
+</a>
+
+</body>
+</html>
