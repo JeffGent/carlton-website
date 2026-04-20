@@ -1,0 +1,18 @@
+{
+  "name": "Carlton Hotel Gent",
+  "short_name": "Carlton",
+  "description": "Your guide to Ghent — walks, tips & more",
+  "start_url": "/guest/",
+  "scope": "/guest/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3d1127",
+  "background_color": "#faf5f0",
+  "icons": [
+    {
+      "src": "../images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
