@@ -269,40 +269,6 @@ section{padding:clamp(60px,8vw,100px) clamp(20px,5vw,80px)}
 .terms-section strong{color:var(--text)}
 .terms-highlight{background:var(--cream-warm);border-left:3px solid var(--olive);padding:16px 20px;margin:20px 0;font-size:0.88rem;line-height:1.7;color:var(--text-mid)}
 
-/* ═══ FLORALIËN BANNER ═══ */
-.floralien-banner{background:var(--olive);color:var(--cream);padding:14px 40px;display:flex;align-items:center;justify-content:center;gap:24px;font-size:.88rem;line-height:1.5;flex-wrap:wrap;text-align:center}
-.floralien-banner .fb-icon{font-size:1.2rem;line-height:1}
-.floralien-banner strong{font-family:'Fraunces',serif;font-weight:500;letter-spacing:.02em}
-.floralien-banner .fb-link{color:var(--cream);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;font-weight:400;letter-spacing:.04em;white-space:nowrap}
-.floralien-banner .fb-link:hover{color:var(--rose-pale)}
-@media(max-width:768px){.floralien-banner{padding:12px 20px;font-size:.82rem;gap:10px}}
-
-/* ═══ FLORALIËN LANDING PAGE ═══ */
-.fl-hero{background:var(--burgundy);color:var(--cream);padding:80px 32px 64px;text-align:center;position:relative;overflow:hidden}
-.fl-hero::before{content:"🌷";position:absolute;font-size:280px;opacity:.06;top:-40px;right:-40px;line-height:1}
-.fl-hero-tag{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--rose);margin-bottom:14px;position:relative}
-.fl-hero-title{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;margin-bottom:14px;position:relative;line-height:1.15}
-.fl-hero-sub{font-size:1.02rem;color:rgba(250,245,240,.78);max-width:540px;margin:0 auto;line-height:1.7;font-weight:300;position:relative}
-.fl-wrap{max-width:780px;margin:0 auto;padding:64px 32px 80px}
-.fl-section{margin-bottom:56px}
-.fl-section h2{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--burgundy);font-weight:400;margin-bottom:18px}
-.fl-section p,.fl-section li{font-size:.92rem;line-height:1.75;color:var(--text-mid)}
-.fl-list{list-style:none;padding:0;margin:0}
-.fl-list li{padding-left:28px;position:relative;margin-bottom:10px}
-.fl-list li::before{content:"";position:absolute;left:0;top:11px;width:14px;height:1px;background:var(--olive)}
-.fl-steps{counter-reset:step;list-style:none;padding:0;margin:0}
-.fl-steps li{padding:14px 16px 14px 56px;position:relative;background:var(--cream-warm);border-left:3px solid var(--olive);margin-bottom:8px;counter-increment:step;font-size:.92rem;color:var(--text-mid);line-height:1.6}
-.fl-steps li::before{content:counter(step);position:absolute;left:18px;top:50%;transform:translateY(-50%);font-family:'Fraunces',serif;font-size:1.4rem;color:var(--olive);font-weight:500}
-.fl-fact{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--sand)}
-.fl-fact:last-child{border-bottom:none}
-.fl-fact-icon{font-size:1.1rem;line-height:1.6;flex-shrink:0;width:24px;text-align:center}
-.fl-fact-text{flex:1;font-size:.92rem;color:var(--text-mid);line-height:1.6}
-.fl-cta-wrap{text-align:center;padding:32px 0 8px}
-.fl-cta{display:inline-block;padding:16px 38px;background:var(--burgundy);color:var(--cream);font-size:.82rem;letter-spacing:2px;text-transform:uppercase;font-weight:400;text-decoration:none;transition:background .3s}
-.fl-cta:hover{background:var(--olive)}
-.fl-fine{font-size:.78rem;color:var(--text-light);font-style:italic;margin-top:16px;text-align:center;line-height:1.6}
-@media(max-width:600px){.fl-hero{padding:56px 20px 44px}.fl-wrap{padding:44px 20px 60px}.fl-section{margin-bottom:40px}}
-
 /* RESPONSIVE */
 @media(max-width:1024px){
 .rooms-grid{grid-template-columns:repeat(2,1fr)}

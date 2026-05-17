@@ -75,48 +75,4 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Floraliën Gent 2026 — NL -->
-  <url>
-    <loc>https://www.carltongent.be/nl/floralien-2026.html</loc>
-    <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.carltongent.be/nl/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.carltongent.be/en/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.carltongent.be/fr/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.carltongent.be/de/floralien-2026.html" />
-  </url>
-
-  <!-- Floraliën Gent 2026 — EN -->
-  <url>
-    <loc>https://www.carltongent.be/en/floralien-2026.html</loc>
-    <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.carltongent.be/nl/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.carltongent.be/en/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.carltongent.be/fr/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.carltongent.be/de/floralien-2026.html" />
-  </url>
-
-  <!-- Floraliën Gent 2026 — FR -->
-  <url>
-    <loc>https://www.carltongent.be/fr/floralien-2026.html</loc>
-    <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.carltongent.be/nl/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.carltongent.be/en/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.carltongent.be/fr/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.carltongent.be/de/floralien-2026.html" />
-  </url>
-
-  <!-- Floraliën Gent 2026 — DE -->
-  <url>
-    <loc>https://www.carltongent.be/de/floralien-2026.html</loc>
-    <lastmod>2026-05-01</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.carltongent.be/nl/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.carltongent.be/en/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.carltongent.be/fr/floralien-2026.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.carltongent.be/de/floralien-2026.html" />
-  </url>
-
 </urlset>
