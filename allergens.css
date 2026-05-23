@@ -1,0 +1,82 @@
+/* ─── ALLERGENS PAGE ─── */
+.all-wrap{max-width:920px;margin:0 auto;padding:60px 32px 80px;overflow-wrap:break-word}
+.all-crumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--text-light);margin:0 0 32px}
+.all-crumb a{color:var(--text-mid);text-decoration:none;padding:4px 2px;margin:-4px -2px}
+.all-crumb a:hover{color:var(--olive)}
+.all-crumb-sep{opacity:.5}
+
+.all-title{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);color:var(--burgundy);font-weight:400;margin-bottom:8px;line-height:1.15}
+.all-sub{font-size:0.95rem;color:var(--text-mid);margin-bottom:32px;line-height:1.7;max-width:680px}
+
+/* Disclaimer box */
+.disc{background:var(--cream-warm);border:1px solid var(--rose-pale);border-left:4px solid var(--olive);border-radius:4px;padding:22px 26px;margin-bottom:28px}
+.disc-title{font-family:'Fraunces',serif;color:var(--olive-dark);font-size:1.1rem;font-weight:500;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.disc-title::before{content:"!";display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--olive);color:var(--cream);border-radius:50%;font-size:0.85rem;font-weight:700;font-family:'Jost',sans-serif;flex-shrink:0}
+.disc p{font-size:0.9rem;line-height:1.7;color:var(--text-mid);margin-bottom:10px}
+.disc p:last-child{margin-bottom:0}
+.disc strong{color:var(--burgundy);font-weight:500}
+
+.all-cta{background:var(--cream-warm);border-left:3px solid var(--burgundy);padding:20px 24px;margin-bottom:48px;border-radius:0 2px 2px 0;font-size:0.92rem;line-height:1.7;color:var(--text-mid)}
+.all-cta strong{color:var(--burgundy);font-family:'Fraunces',serif;font-size:1.05rem;display:block;margin-bottom:6px;font-weight:400}
+.all-cta a{color:var(--olive);text-decoration:none;border-bottom:1px solid rgba(123,128,96,0.3);transition:border-color .2s}
+.all-cta a:hover{border-bottom-color:var(--olive)}
+
+.all-section-title{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--burgundy);font-weight:400;margin:0 0 8px;line-height:1.2}
+.all-section-sub{font-size:0.88rem;color:var(--text-light);margin-bottom:28px}
+
+/* Product list */
+.prod-cat{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--burgundy-deep);font-weight:500;margin:36px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--burgundy)}
+.prod-cat:first-of-type{margin-top:0}
+.prod-cat-note{font-size:0.82rem;color:var(--text-light);font-style:italic;margin-bottom:12px}
+.prod-list{margin-bottom:24px}
+.prod-row{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:12px 0;border-bottom:1px solid var(--sand)}
+.prod-row:last-child{border-bottom:none}
+.prod-name{font-size:0.95rem;color:var(--text);flex:1 1 220px;min-width:0;line-height:1.45}
+.prod-allergens{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.pill{display:inline-block;background:var(--sand);color:var(--burgundy);font-size:0.74rem;letter-spacing:0.03em;padding:3px 11px;border-radius:100px;font-weight:500}
+.pill-none{font-size:0.78rem;color:var(--text-light);font-style:italic;padding:3px 0}
+@media(max-width:600px){
+  .prod-name{flex:0 1 auto}
+}
+
+/* Reference section (14 allergens) */
+.ref-intro{background:var(--burgundy);color:var(--cream);border-radius:4px;padding:26px 30px;margin:56px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+.ref-intro-num{font-family:'Fraunces',serif;font-size:4rem;line-height:1;color:var(--rose);font-weight:400}
+.ref-intro-text{font-size:0.92rem;line-height:1.65;opacity:0.92}
+.ref-intro-text strong{color:var(--rose);font-weight:500}
+@media(max-width:600px){.ref-intro{grid-template-columns:1fr;padding:22px;gap:12px;text-align:center}.ref-intro-num{font-size:3rem}}
+
+.all-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:48px}
+@media(max-width:720px){.all-grid{grid-template-columns:1fr;gap:14px}}
+
+.all-card{background:var(--cream);border:1px solid var(--sand);border-radius:3px;padding:18px 20px 16px;transition:border-color .2s;display:flex;flex-direction:column;min-width:0}
+.all-card:hover{border-color:var(--olive)}
+.all-card-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+.all-card-num{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--olive);line-height:1;flex-shrink:0;min-width:24px;font-weight:500}
+.all-card-name{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--burgundy);line-height:1.2;font-weight:500}
+.all-card-desc{font-size:0.83rem;line-height:1.6;color:var(--text-mid)}
+
+.all-foot{font-size:0.82rem;color:var(--text-light);line-height:1.7;margin-top:24px;border-top:1px solid var(--sand);padding-top:24px}
+.all-foot a{color:var(--olive);text-decoration:none}
+.all-foot a:hover{text-decoration:underline}
+
+.all-totop{display:inline-flex;align-items:center;gap:6px;margin-top:32px;font-size:13px;color:var(--olive);text-decoration:none;padding:10px 16px;border:1px solid var(--sand);border-radius:100px}
+.all-totop:hover{text-decoration:underline}
+
+@media(max-width:600px){
+  .all-wrap{padding:40px 18px 60px}
+  .all-cta{padding:16px 18px}
+  .disc{padding:18px 20px}
+  .all-section-title{font-size:1.4rem}
+  .prod-cat{font-size:1.1rem}
+}
+
+@media print{
+  .top-bar,.wa-float,.all-crumb,.all-totop{display:none!important}
+  body{background:#fff;color:#000}
+  .ref-intro{background:#fff;color:#000;border:2px solid #000}
+  .ref-intro-num,.all-card-num,.all-card-name,.all-section-title,.prod-cat,.disc-title{color:#000}
+  .all-card,.disc{break-inside:avoid;border:1px solid #000}
+  .pill{background:#eee;color:#000}
+  a{color:#000;text-decoration:underline}
+}

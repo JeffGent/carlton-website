@@ -75,4 +75,49 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Allergens pages -->
+  <url>
+    <loc>https://www.carltongent.be/nl/allergenen.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.carltongent.be/nl/allergenen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.carltongent.be/en/allergens.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.carltongent.be/fr/allergenes.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.carltongent.be/de/allergene.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.carltongent.be/nl/allergenen.html" />
+  </url>
+
+  <url>
+    <loc>https://www.carltongent.be/en/allergens.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.carltongent.be/nl/allergenen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.carltongent.be/en/allergens.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.carltongent.be/fr/allergenes.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.carltongent.be/de/allergene.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.carltongent.be/nl/allergenen.html" />
+  </url>
+
+  <url>
+    <loc>https://www.carltongent.be/fr/allergenes.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.carltongent.be/nl/allergenen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.carltongent.be/en/allergens.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.carltongent.be/fr/allergenes.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.carltongent.be/de/allergene.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.carltongent.be/nl/allergenen.html" />
+  </url>
+
+  <url>
+    <loc>https://www.carltongent.be/de/allergene.html</loc>
+    <lastmod>2026-05-23</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.carltongent.be/nl/allergenen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.carltongent.be/en/allergens.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.carltongent.be/fr/allergenes.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.carltongent.be/de/allergene.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.carltongent.be/nl/allergenen.html" />
+  </url>
+
 </urlset>
