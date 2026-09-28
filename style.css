@@ -37,10 +37,11 @@ body{font-family:'Jost',sans-serif;color:var(--text);background:var(--cream);fon
 .nav-langs a:hover{opacity:1}
 .site-nav.scrolled .nav-langs a{color:var(--text-mid)}
 .nav-sep{width:1px;height:12px;background:currentColor;opacity:.3}
-.nav-book{margin-left:20px;padding:9px 22px;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:400;border:1px solid rgba(255,255,255,.5);color:var(--cream);text-decoration:none;transition:all .3s}
-.nav-book:hover{background:var(--cream);color:var(--burgundy)}
-.site-nav.scrolled .nav-book{border-color:var(--burgundy);color:var(--burgundy)}
-.site-nav.scrolled .nav-book:hover{background:var(--burgundy);color:var(--cream)}
+.nav-book,.nav-portal{margin-left:20px;padding:9px 22px;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:400;border:1px solid rgba(255,255,255,.5);color:var(--cream);text-decoration:none;transition:all .3s}
+.nav-book:hover,.nav-portal:hover{background:var(--cream);color:var(--burgundy)}
+.site-nav.scrolled .nav-book,.site-nav.scrolled .nav-portal{border-color:var(--burgundy);color:var(--burgundy)}
+.site-nav.scrolled .nav-book:hover,.site-nav.scrolled .nav-portal:hover{background:var(--burgundy);color:var(--cream)}
+.nav-portal+.nav-book{margin-left:10px}
 .nav-toggle{display:none;margin-left:auto;background:none;border:none;cursor:pointer;padding:4px}
 .nav-toggle svg{width:26px;height:26px;stroke:var(--cream);stroke-width:1.5;transition:stroke .4s}
 .site-nav.scrolled .nav-toggle svg{stroke:var(--burgundy)}
@@ -289,7 +290,7 @@ section{padding:clamp(60px,8vw,100px) clamp(20px,5vw,80px)}
 .sustain-tiles{margin-top:32px;grid-template-columns:1fr}
 }
 @media(max-width:1200px){
-.nav-links,.nav-langs,.nav-book{display:none}
+.nav-links,.nav-langs,.nav-book,.nav-portal{display:none}
 .nav-toggle{display:block}
 .site-nav{padding:14px 20px}
 }
