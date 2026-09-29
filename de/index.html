@@ -153,7 +153,8 @@
 <a href="../fr/" hreflang="fr">FR</a><span class="nav-sep"></span>
 <a href="index.html" class="active" hreflang="de">DE</a>
 </div>
-<a href="https://bookingengine.mylighthouse.com/carlton-hotel-gent-gent/Rooms/GeneralAvailability?Language=de" class="nav-book" target="_blank" rel="noopener">Jetzt buchen</a>
+<a href="https://portal.carltongent.be" class="nav-portal" target="_blank" rel="noopener">Gästeportal</a>
+<a href="#" class="nav-book" data-rumo-book>Jetzt buchen</a>
 <button class="nav-toggle" id="navToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
 </nav>
 
@@ -170,7 +171,7 @@
 <li><a href="#praktisches">Praktisches</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#kontakt">Kontakt</a></li>
-<li><a href="https://bookingengine.mylighthouse.com/carlton-hotel-gent-gent/Rooms/GeneralAvailability?Language=de" target="_blank" rel="noopener">Jetzt buchen</a></li>
+<li><a href="#" data-rumo-book>Jetzt buchen</a></li>
 </ul>
 <div class="drawer-langs">
 <a href="../nl/" hreflang="nl">NL</a><span class="nav-sep"></span>
@@ -187,7 +188,7 @@
 <picture><source srcset="../images/logo.webp" type="image/webp"><img src="../images/logo.png" alt="Carlton Hotel Gent" class="hero-logo"></picture>
 <h1 class="sr-only">Carlton Hotel Gent</h1>
 <p class="hero-sub">Boutique-Hotel · Gent · 3 Sterne</p>
-<a href="https://bookingengine.mylighthouse.com/carlton-hotel-gent-gent/Rooms/GeneralAvailability?Language=de" target="_blank" rel="noopener" class="hero-cta">Jetzt buchen</a>
+<a href="#" class="hero-cta" data-rumo-book>Jetzt buchen</a>
 </div>
 <div class="scroll-hint"><span></span>Scroll</div>
 </section>
@@ -198,9 +199,9 @@
 <div class="booking-fields">
 <input type="text" class="b-input b-date" id="b-arrival" placeholder="Anreise" readonly>
 <input type="text" class="b-input b-date" id="b-departure" placeholder="Abreise" readonly>
-<input type="text" class="b-input" id="b-coupon" placeholder="Rabattcode" value="DONTTELLTHEM"><span class="coupon-hint">psst — 5 % Rabatt, bereits angewendet</span>
+<span class="coupon-hint">psst — geben Sie beim Buchen den Code <strong>DONTTELLTHEM</strong> ein für 5 % Rabatt</span>
 </div>
-<a href="https://bookingengine.mylighthouse.com/carlton-hotel-gent-gent/Rooms/GeneralAvailability?Language=de" class="btn-book-bar" onclick="return goBook(this)">Verfügbarkeit prüfen</a>
+<a href="#" class="btn-book-bar" data-rumo-book>Verfügbarkeit prüfen</a>
 </div>
 
 <!-- ABOUT -->
@@ -212,7 +213,7 @@
 <p class="section-text">Mit 22 Zimmern sind wir bewusst kein grosses Hotel. Das merken Sie überall: am persönlichen Empfang, an den Tipps, die wir Ihnen zur Stadt mitgeben, und an einem Frühstück, das unsere Gäste jedes Mal wieder überrascht.</p>
 <p class="section-text">Wir liegen zwei Gehminuten vom Hauptbahnhof Gent-Sint-Pieters entfernt. Nah genug für eine bequeme Anreise, weit genug vom Trubel für eine gute Nachtruhe.</p>
 <p class="section-text">Jeffrey und sein Bruder Steven führen das Carlton seit 2012. Keine grosse Hotelkette, kein anonymer Direktor im siebten Stock. Einfach zwei Brüder, die glauben, dass ein Hotel persönlich sein darf.</p>
-<a href="https://bookingengine.mylighthouse.com/carlton-hotel-gent-gent/Rooms/Select?" class="about-cta" target="_blank" rel="noopener">Jetzt buchen</a>
+<a href="#" class="about-cta" data-rumo-book>Jetzt buchen</a>
 </div>
 <picture><source srcset="../images/kamer-deluxe-1.webp" type="image/webp"><img src="../images/kamer-deluxe-1.jpg" alt="Carlton Hotel Interieur" class="about-img" loading="lazy"></picture>
 </div>
@@ -635,6 +636,7 @@
 <a href="bedingungen.html">Stornierungsbedingungen</a>
 <a href="#" onclick="document.getElementById('modal-privacy').classList.add('active');return false">Datenschutzerklärung</a>
 <a href="#agb" onclick="document.getElementById('modal-terms').classList.add('active');return false">Allgemeine Geschaftsbedingungen</a>
+<a href="https://portal.carltongent.be" target="_blank" rel="noopener">Gästeportal</a>
 </div>
 </div>
 <div class="footer-bottom">
@@ -736,7 +738,7 @@
 
 <script src="../script.js"></script>
 
-<div class="mobile-book-bar"><a href="https://bookingengine.mylighthouse.com/carlton-hotel-gent-gent/Rooms/GeneralAvailability?Language=de" target="_blank" rel="noopener">Jetzt buchen</a></div>
+<div class="mobile-book-bar"><a href="#" data-rumo-book>Jetzt buchen</a></div>
 
 <!-- GOOGLE REVIEWS -->
 <script>
@@ -848,5 +850,6 @@
   });
 })();
 </script>
+<script src="https://app.rumo.eu/embed.js" data-hotel="carlton" data-label="Jetzt buchen"></script>
 </body>
 </html>
