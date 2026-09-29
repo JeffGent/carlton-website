@@ -198,18 +198,3 @@ document.addEventListener('click',function(e){
 if(!e.target.closest('.cal-popup')&&!e.target.closest('.b-date'))closeAll();
 });
 
-// BOOKING
-window.goBook=function(el){
-var base='https://bookingengine.mylighthouse.com/carlton-hotel-gent-gent/Rooms/Select?';
-var arr=bArr.dataset.iso||'';
-var dep=bDep.dataset.iso||'';
-var coupon=document.getElementById('b-coupon').value.trim();
-var params=[];
-if(arr){var d=new Date(arr);params.push('Arrival='+d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate());}
-if(dep){var d2=new Date(dep);params.push('Departure='+d2.getFullYear()+'-'+(d2.getMonth()+1)+'-'+d2.getDate());}
-params.push('Room=','Rate=','Package=');
-if(coupon)params.push('DiscountCode='+encodeURIComponent(coupon));
-el.href=base+params.join('&');
-return true;
-};
-
