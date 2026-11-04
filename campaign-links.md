@@ -2,13 +2,13 @@
 
 Twee delen: **always-on** (permanent, voor bio's en handtekeningen) en **per-campagne** (tijdelijke acties).
 
-> Carlton's analytics start vanaf 19 mei 2026 — eerste data over ~24-48u in GA4 property `377208825`.
+> Carlton's analytics start vanaf 19 mei 2026, in GA4 property `377208825`. Sinds de toestemmingsbalk (`consent.js`) meet GA alleen wie accepteert.
 
 ---
 
 # Always-on kanalen
 
-Vervang je huidige links **één keer** door onderstaande. Daarna zie je in GA per kanaal exact hoeveel sessies en boekingen.
+Vervang je huidige links **één keer** door onderstaande. Daarna zie je in GA per kanaal de sessies en boekingen (`purchase`) van bezoekers die cookies accepteerden. Wie weigert, telt niet mee: de cijfers liggen dus lager dan de werkelijkheid. Het exacte aantal boekingen staat in Rumo.
 
 ## Instagram bio
 
