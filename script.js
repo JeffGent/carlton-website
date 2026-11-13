@@ -146,9 +146,9 @@ function render(){
 pop.innerHTML='';
 var head=document.createElement('div');head.className='cal-head';
 var prev=document.createElement('button');prev.textContent='\u2039';
-prev.onclick=function(){month--;if(month<0){month=11;year--}render()};
+prev.onclick=function(e){e.stopPropagation();month--;if(month<0){month=11;year--}render()};
 var next=document.createElement('button');next.textContent='\u203A';
-next.onclick=function(){month++;if(month>11){month=0;year++}render()};
+next.onclick=function(e){e.stopPropagation();month++;if(month>11){month=0;year++}render()};
 var label=document.createElement('span');
 label.textContent=LOCALE.months[month]+' '+year;
 head.appendChild(prev);head.appendChild(label);head.appendChild(next);
@@ -160,12 +160,12 @@ var lbl=document.createElement('div');lbl.className='cal-day-label';lbl.textCont
 var first=new Date(year,month,1);
 var startDay=(first.getDay()+6)%7;
 var daysInMonth=new Date(year,month+1,0).getDate();
-var today=new Date();today.setHours(0,0,0,0);
+var minDay=new Date(minDate||Date.now());minDay.setHours(0,0,0,0);
 for(var i=0;i<startDay;i++){var empty=document.createElement('div');grid.appendChild(empty)}
 for(var d=1;d<=daysInMonth;d++){
 var cell=document.createElement('div');cell.className='cal-day';cell.textContent=d;
 var dt=new Date(year,month,d);
-if(dt<today){cell.classList.add('disabled')}else{
+if(dt<minDay){cell.classList.add('disabled')}else{
 (function(dt){cell.onclick=function(){onPick(dt);closeAll()}})(dt);
 }
 grid.appendChild(cell);
@@ -180,19 +180,28 @@ document.body.appendChild(pop);
 return pop;
 }
 var bArr=document.getElementById('b-arrival'),bDep=document.getElementById('b-departure');
+// The booking bar hands the chosen dates to the Rumo widget (embed.js reads
+// data-checkin/data-checkout when the button is clicked). Without both dates
+// the widget opens on its own search step.
+function syncBookDates(){
+var btn=document.querySelector('.btn-book-bar');if(!btn)return;
+var ci=bArr.dataset.iso||'',co=bDep.dataset.iso||'';
+if(ci&&co&&co>ci){btn.setAttribute('data-checkin',ci);btn.setAttribute('data-checkout',co)}
+else{btn.removeAttribute('data-checkin');btn.removeAttribute('data-checkout')}
+}
 bArr.addEventListener('click',function(){
 buildCal(bArr,function(d){
 bArr.value=fmtDisplay(d);bArr.dataset.iso=isoStr(d);
-bDep.value='';bDep.dataset.iso='';
+bDep.value='';bDep.dataset.iso='';syncBookDates();
 setTimeout(function(){
-buildCal(bDep,function(d2){bDep.value=fmtDisplay(d2);bDep.dataset.iso=isoStr(d2)},new Date(d.getTime()+86400000));
+buildCal(bDep,function(d2){bDep.value=fmtDisplay(d2);bDep.dataset.iso=isoStr(d2);syncBookDates()},new Date(d.getTime()+86400000));
 },100);
 });
 });
 bDep.addEventListener('click',function(){
 var min=bArr.dataset.iso?new Date(bArr.dataset.iso+'T00:00:00'):new Date();
 min.setDate(min.getDate()+1);
-buildCal(bDep,function(d){bDep.value=fmtDisplay(d);bDep.dataset.iso=isoStr(d)},min);
+buildCal(bDep,function(d){bDep.value=fmtDisplay(d);bDep.dataset.iso=isoStr(d);syncBookDates()},min);
 });
 document.addEventListener('click',function(e){
 if(!e.target.closest('.cal-popup')&&!e.target.closest('.b-date'))closeAll();
